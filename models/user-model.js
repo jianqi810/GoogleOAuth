@@ -7,6 +7,9 @@ const userSchema = new mongoose.Schema({
     minLength: 3,
     maxLength: 255,
   },
+  facebookID: {
+    type: String,
+  },
   googleID: {
     type: String,
   },

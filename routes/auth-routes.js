@@ -51,6 +51,18 @@ router.post('/signup', async (req, res) => {
   return res.redirect('/auth/login');
 });
 
+// router for Facebook
+router.get('/facebook', passport.authenticate('facebook'));
+
+router.get(
+  '/facebook/redirect',
+  passport.authenticate('facebook'),
+  (req, res) => {
+    return res.redirect('/profile');
+  }
+);
+
+// router for Google
 router.get(
   '/google',
   passport.authenticate('google', {

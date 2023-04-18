@@ -11,7 +11,7 @@ const passport = require('passport');
 const flash = require('connect-flash');
 
 mongoose
-  .connect('mongodb://localhost:27017/GoogleDB')
+  .connect('mongodb://localhost:27017/OAuthDB')
   .then(() => {
     console.log('Connecting to mongodb');
   })
